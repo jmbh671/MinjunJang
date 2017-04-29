@@ -14,7 +14,7 @@ public class JdbcUtil {
 		try {
 			Context initCtx = new InitialContext();
 			Context envCtx = (Context)initCtx.lookup("java:comp/env");
-			DataSource ds = (DataSource)envCtx.lookup("jdbc/OracleDB");
+			DataSource ds = (DataSource)envCtx.lookup("jdbc/OracleDB"); //mysql    
 			con = ds.getConnection();
 			con.setAutoCommit(false);
 			System.out.println("connect success");
